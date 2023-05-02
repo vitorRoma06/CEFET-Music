@@ -1,59 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>CefetMUSIC - Explorar</title>
 </head>
 
 <body>
     <aside class="menu-lateral">
         <header class="menu-lateral-header">
-            <div class="logo"><img src="img/logo.svg" alt="logo">
-                <span>Cefet<span id="blue">MUSIC</span></span>
-            </div>
+            <a href="Explorar.html">
+                <div class="logo"><img src="img/logo.svg" alt="logo">
+                    <span>Cefet<span id="blue">MUSIC</span></span>
+                </div>
+            </a>
         </header>
 
         <nav class="nav">
-            <button>
-                <span>
-                    <img src="img/explorar.svg">
-                    <span>Explorar</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img src="img/music-note.svg">
-                    <span>Músicas</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img src="img/people.svg">
-                    <span>Comunidades</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img src="img/chat.svg">
-                    <span>Chats</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img src="img/coracao.svg">
-                    <span>Favoritos</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img src="img/add.svg">
-                    <span>Criar Playlist</span>
-                </span>
-            </button>
+            <a href="Explorar.html">
+                <button>
+                    <span>
+                        <img src="img/explorar.svg">
+                        <span>Explorar</span>
+                    </span>
+                </button>
+            </a>
+            <a href="Musicas.html">
+                <button>
+                    <span>
+                        <img src="img/music-note.svg">
+                        <span>Músicas</span>
+                    </span>
+                </button>
+            </a>
+            <a href="Comunidades.html">
+                <button>
+                    <span>
+                        <img src="img/people.svg">
+                        <span>Comunidades</span>
+                    </span>
+                </button>
+            </a>
+            <a href="Chats.html">
+                <button>
+                    <span>
+                        <img src="img/chat.svg">
+                        <span>Chats</span>
+                    </span>
+                </button>
+            </a>
+            <a href="Favoritos.html">
+                <button>
+                    <span>
+                        <img src="img/coracao.svg">
+                        <span>Favoritos</span>
+                    </span>
+                </button>
+            </a>
+            <a href="CriarPlaylist.html">
+                <button>
+                    <span>
+                        <img src="img/add.svg">
+                        <span>Criar Playlist</span>
+                    </span>
+                </button>
+            </a>
         </nav>
         <hr>
         <button>
@@ -63,6 +77,68 @@
             </span>
         </button>
     </aside>
+
+    <!--Criando menu mobile-->
+    <button class="button-mobile" onclick="toggleMenu()">
+        <img src="img/menu.svg" alt="">
+        <span>Menu</span>
+        <span></span>
+    </button>
+
+    <nav class="menu-mobile" id="menu-mobile">
+        <button onclick="toggleMenu()">
+            <span>
+                <img src="img/close.svg">
+            </span>
+        </button>
+
+        <a href="Explorar.html">
+            <button>
+                <span>
+                    <img src="img/explorar.svg">
+                    <span class="mobile-text">Explorar</span>
+                </span>
+            </button>
+        </a>
+        <a href="Musicas.html">
+            <button>
+                <span>
+                    <img src="img/music-note.svg">
+                    <span class="mobile-text">Músicas</span>
+                </span>
+            </button>
+        </a>
+        <a href="Comunidades.html">
+            <button>
+                <span>
+                    <img src="img/people.svg">
+                    <span class="mobile-text">Comunidades</span>
+                </span>
+            </button>
+        </a>
+        <a href="Chats.html">
+            <button>
+                <span>
+                    <img src="img/chat.svg">
+                    <span class="mobile-text">Chats</span>
+                </span>
+            </button>
+        </a>
+        <a href="Favoritos.html">
+            <button>
+                <span>
+                    <img src="img/coracao.svg">
+                    <span class="mobile-text">Favoritos</span>
+                </span>
+            </button>
+        </a>
+        <button>
+            <span>
+                <img src="img/sair.svg">
+                <span class="mobile-text">Sair</span>
+            </span>
+        </button>
+    </nav>
 
 
 
@@ -99,6 +175,7 @@
             </section>
         </header>
 
+        <span class="titulo-paginas">Explorar</span>
         <section class="banner">
             <img src="img/travis.jpg" alt="musicBoy">
             <div class="slogan"><span>Conecte-se com a <span id="blue">MÚSICA</span></span></div>
@@ -107,62 +184,216 @@
         <hr class="divisao">
 
         <section class="mais-ouvidas-amigos">
-            <div class="up-mais-ouvidas">
-                <h1>Mais ouvidas por amigos:</h1>
-                <div class="ver-mais">
-                    <span>Ver Mais</span>
-                    <img src="img/Arrow 1.png" alt="">
+            <div class="tudo-mais-ouvidas">
+                <div class="up-mais-ouvidas">
+                    <h1 id="titulo-secao">Mais ouvidas por amigos:</h1>
+                    <div class="ver-mais">
+                        <span>Ver Mais</span>
+                        <img src="img/Arrow 1.png" alt="">
+                    </div>
                 </div>
+                <div class="down-mais-ouvidas">
 
-            </div>
-            <div class="down-mais-ouvidas">
-                <div class="perfil">
-                    <div class="nome"><img src="img/jobs.png"><span>Steve</span><span id="blue">Seguir</span></div>
-                    <div class="play-music">
-                        <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/jobs.png"><span>Steve</span><span id="blue">Seguir</span></div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
                     </div>
-                    <div class="interacoes-mais-ouvidas">
-                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                        <button><img src="img/share.svg" alt=""><span>12</span></button>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/monica.jpg"><span>Mônica</span><span id="blue">Seguir</span>
+                        </div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Baile de Favela<br>MC João</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
                     </div>
-                </div>
-                <div class="perfil">
-                    <div class="nome"><img src="img/monica.jpg"><span>Mônica</span><span id="blue">Seguir</span></div>
-                    <div class="play-music">
-                        <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/bill.jpg"><span>Bill</span><span id="blue">Seguir</span></div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Hope<br>XXX Tentation</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
                     </div>
-                    <div class="interacoes-mais-ouvidas">
-                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                        <button><img src="img/share.svg" alt=""><span>12</span></button>
-                    </div>
-                </div>
-                <div class="perfil">
-                    <div class="nome"><img src="img/bill.jpg"><span>Bill</span><span id="blue">Seguir</span></div>
-                    <div class="play-music">
-                        <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
-                    </div>
-                    <div class="interacoes-mais-ouvidas">
-                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                        <button><img src="img/share.svg" alt=""><span>12</span></button>
-                    </div>
-                </div>
-                <div class="perfil">
-                    <div class="nome"><img src="img/cebolinha.jpg"><span>Cebolinha</span><span id="blue">Seguir</span></div>
-                    <div class="play-music">
-                        <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
-                    </div>
-                    <div class="interacoes-mais-ouvidas">
-                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                        <button><img src="img/share.svg" alt=""><span>12</span></button>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/cebolinha.jpg"><span>Cebolinha</span><span
+                                id="blue">Seguir</span>
+                        </div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Tú Conhece a Paola<br>MC VN do B13</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <hr class="divisao">
+
+        <section class="top-dez">
+            <h1 id="titulo-secao">Top 10 comunidades CEFET-MG:</h1>
+            <div class="top-10-blocos">
+                <section class="top1-top5">
+                    <div class="blocos-top"><span>0<span id="blue">1</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">2</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">3</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">4</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">5</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                </section>
+                <section class="top6-top10">
+                    <div class="blocos-top"><span>0<span id="blue">6</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">7</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">8</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">9</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span id="blue">1<span>0</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <hr class="divisao">
+        
+        <section class="mais-ouvidas-amigos">
+            <div class="tudo-mais-ouvidas">
+                <div class="up-mais-ouvidas">
+                    <h1 id="titulo-secao">Mais ouvidas por amigos:</h1>
+                    <div class="ver-mais">
+                        <span>Ver Mais</span>
+                        <img src="img/Arrow 1.png" alt="">
+                    </div>
+                </div>
+                <div class="down-mais-ouvidas">
+
+                    <div class="perfil">
+                        <div class="nome"><img src="img/jobs.png"><span>Steve</span><span id="blue">Seguir</span></div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Wave<br>Tom Jobin</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
+                    </div>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/monica.jpg"><span>Mônica</span><span id="blue">Seguir</span>
+                        </div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Baile de Favela<br>MC João</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
+                    </div>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/bill.jpg"><span>Bill</span><span id="blue">Seguir</span></div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Hope<br>XXX Tentation</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
+                    </div>
+                    <div class="perfil">
+                        <div class="nome"><img src="img/cebolinha.jpg"><span>Cebolinha</span><span
+                                id="blue">Seguir</span>
+                        </div>
+                        <div class="play-music">
+                            <div class="square-play-music"></div><span>Tú Conhece a Paola<br>MC VN do B13</span>
+                        </div>
+                        <div class="interacoes-mais-ouvidas">
+                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                            <button><img src="img/share.svg" alt=""><span>12</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divisao">
+
+        <section class="top-dez">
+            <h1 id="titulo-secao">Top 10 comunidades CEFET-MG:</h1>
+            <div class="top-10-blocos">
+                <section class="top1-top5">
+                    <div class="blocos-top"><span>0<span id="blue">1</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">2</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">3</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">4</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">5</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                </section>
+                <section class="top6-top10">
+                    <div class="blocos-top"><span>0<span id="blue">6</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">7</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">8</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span>0<span id="blue">9</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                    <div class="blocos-top"><span id="blue">1<span>0</span></span>
+                        <div class="comunidade-top"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
