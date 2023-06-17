@@ -20,7 +20,7 @@
             <p id="subtitulo">De volta ao ritmo: sua música favorita está esperando por você. Faça login agora!</p>
 
             <form class="inputCadastro" method="POST" action="php/login-email.php">
-                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="email" name="email" placeholder= "Email">
                 <input type="password" id="senha" name="senha" placeholder="Senha">
             </form>
             <div class="entrar-sociais">
@@ -48,11 +48,17 @@
                 </div>
             </div>
 
-            <button class="btn">
+            <button class="btn" onclick="submitForm()">
                 <span class="shadow"><a href="Explorar.html"></a></span>
                 <span class="edge"><a href="Explorar.html"></a></span>
-                <span class="front text"> <a href="Explorar.html">ENTRAR</a></span>
+                <span class="front text"> ENTRAR </span>
             </button>
+
+            <script>
+                function submitForm() {
+                    document.querySelector('.inputCadastro').submit();
+                }
+            </script>
 
             <p id="opcao">Você não tem uma conta? <a id="amarelo" href="Cadastro.html">Cadastre-se</a></p>
         </div>
