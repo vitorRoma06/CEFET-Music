@@ -197,55 +197,101 @@
                 </div>
                 <div class="down-mais-ouvidas">
 
-                    <div class="perfil">
-                        <div class="nome"><img src="img/jobs.png"><span>Steve</span><span id="blue">Seguir</span></div>
-                        <div class="play-music">
-                            <div class="square-play-music"><img src="img/tom-jobim.jpg" alt=""></div><span>Wave<br>Tom Jobin</span>
-                        </div>
-                        <div class="interacoes-mais-ouvidas">
-                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                            <button><img src="img/share.svg" alt=""><span>12</span></button>
-                        </div>
+                <div class="perfil">
+                    <div class="nome"><img src="img/jobs.png"><span>Steve</span><span id="blue">Seguir</span></div>
+                    <div class="play-music">
+                        <div class="square-play-music"><img src="img/tom-jobim.jpg" alt=""></div><span>Wave<br>Tom Jobin</span>
+                        <script>
+                            var fotoWave = document.querySelector(".perfil:nth-child(1) .square-play-music img");
+                            var urlMusicaWave = "Wave.mp3";
+                            var audioWave = new Audio(urlMusicaWave);
+                            fotoWave.addEventListener("mouseover", function() {
+                                audioWave.play();
+                            });
+                            fotoWave.addEventListener("mouseout", function() {
+                                audioWave.pause();
+                                audioWave.currentTime = 0;
+                            });
+                        </script>
                     </div>
-                    <div class="perfil">
-                        <div class="nome"><img src="img/monica.jpg"><span>Mônica</span><span id="blue">Seguir</span>
-                        </div>
-                        <div class="play-music">
-                            <div class="square-play-music"><img src="img/baile-favela.png" alt=""></div><span>Baile de Favela<br>MC João</span>
-                        </div>
-                        <div class="interacoes-mais-ouvidas">
-                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                            <button><img src="img/share.svg" alt=""><span>12</span></button>
-                        </div>
-                    </div>
-                    <div class="perfil">
-                        <div class="nome"><img src="img/bill.jpg"><span>Bill</span><span id="blue">Seguir</span></div>
-                        <div class="play-music">
-                            <div class="square-play-music"><img src="img/hope.png" alt=""></div><span>Hope<br>XXX Tentation</span>
-                        </div>
-                        <div class="interacoes-mais-ouvidas">
-                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                            <button><img src="img/share.svg" alt=""><span>12</span></button>
-                        </div>
-                    </div>
-                    <div class="perfil">
-                        <div class="nome"><img src="img/cebolinha.jpg"><span>Cebolinha</span><span
-                                id="blue">Seguir</span>
-                        </div>
-                        <div class="play-music">
-                            <div class="square-play-music"><img src="img/mc-vn.png" alt=""></div><span>Tú Conhece a Paola<br>MC VN do B13</span>
-                        </div>
-                        <div class="interacoes-mais-ouvidas">
-                            <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
-                            <button><img src="img/coment.svg" alt=""><span>12</span></button>
-                            <button><img src="img/share.svg" alt=""><span>12</span></button>
-                        </div>
+                    <div class="interacoes-mais-ouvidas">
+                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                        <button><img src="img/share.svg" alt=""><span>12</span></button>
                     </div>
                 </div>
-            </div>
+                <div class="perfil">
+                    <div class="nome"><img src="img/monica.jpg"><span>Mônica</span><span id="blue">Seguir</span>
+                    </div>
+                    <div class="play-music">
+                        <div class="square-play-music"><img src="img/baile-favela.png" alt=""></div><span>Baile de Favela<br>MC João</span>
+                        <script>
+                            var fotoBaileFavela = document.querySelector(".perfil:nth-child(2) .square-play-music img");
+                            var urlMusicaBaileFavela = "Baile de Favela (DJ R7).mp3";
+                            var audioBaileFavela = new Audio(urlMusicaBaileFavela);
+                            fotoBaileFavela.addEventListener("mouseover", function() {
+                                audioBaileFavela.play();
+                            });
+                            fotoBaileFavela.addEventListener("mouseout", function() {
+                                audioBaileFavela.pause();
+                                audioBaileFavela.currentTime = 0;
+                            });
+                        </script>
+                    </div>
+                    <div class="interacoes-mais-ouvidas">
+                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                        <button><img src="img/share.svg" alt=""><span>12</span></button>
+                    </div>
+                </div>
+                <div class="perfil">
+                    <div class="nome"><img src="img/bill.jpg"><span>Bill</span><span id="blue">Seguir</span></div>
+                    <div class="play-music">
+                        <div class="square-play-music"><img src="img/hope.png" alt=""></div><span>Hope<br>XXX Tentation</span>
+                    </div>
+                    <script>
+                            var fotoXXX = document.querySelector(".perfil:nth-child(3) .square-play-music img");
+                            var urlMusicaXXX = "hope.mp3";
+                            var audioXXX = new Audio(urlMusicaXXX);
+                            fotoXXX.addEventListener("mouseover", function() {
+                                audioXXX.play();
+                            });
+                            fotoXXX.addEventListener("mouseout", function() {
+                                audioXXX.pause();
+                                audioXXX.currentTime = 0;
+                            });
+                        </script>
+                    <div class="interacoes-mais-ouvidas">
+                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                        <button><img src="img/share.svg" alt=""><span>12</span></button>
+                    </div>
+                </div>
+                <div class="perfil">
+                    <div class="nome"><img src="img/cebolinha.jpg"><span>Cebolinha</span><span id="blue">Seguir</span>
+                    </div>
+                    <div class="play-music">
+                        <div class="square-play-music"><img src="img/mc-vn.png" alt=""></div><span>Tú Conhece a Paola<br>MC VN do B13</span>
+                        <script>
+                            var fotoMCVn = document.querySelector(".perfil:nth-child(4) .square-play-music img");
+                            var urlMusicaMCVn = "dubstep_funk.mp3";
+                            var audioMCVn = new Audio(urlMusicaMCVn);
+                            fotoMCVn.addEventListener("mouseover", function() {
+                                audioMCVn.play();
+                            });
+                            fotoMCVn.addEventListener("mouseout", function() {
+                                audioMCVn.pause();
+                                audioMCVn.currentTime = 0;
+                            });
+                        </script>
+                    </div>
+                    <div class="interacoes-mais-ouvidas">
+                        <button><img src="img/coracao2.svg" alt=""><span>12</span></button>
+                        <button><img src="img/coment.svg" alt=""><span>12</span></button>
+                        <button><img src="img/share.svg" alt=""><span>12</span></button>
+                    </div>
+                </div>
+
         </section>
 
         <hr class="divisao">
