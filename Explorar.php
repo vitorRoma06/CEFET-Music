@@ -153,9 +153,12 @@
                     <button>
                         <img src="img/contraste.svg">
                     </button>
-                    <button>
-                        <img src="img/libras.svg">
-                    </button>
+                    <form method="POST" action="libras.php">
+                        <button type="submit" name="libras">
+                            <img src="img/libras.svg">
+                        </button>
+                    </form>
+                    
                     <button>
                         <img src="img/fonte.svg">
                     </button>
@@ -167,7 +170,7 @@
                         </a>
                     </button>
                     <button>
-                        <a href="Login.html">
+                        <a href="Login.php">
                             <span>Entrar</span>
                         </a>
                     </button>

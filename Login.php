@@ -19,7 +19,7 @@
             <h1 id="titulo-container">Login</h1>
             <p id="subtitulo">De volta ao ritmo: sua música favorita está esperando por você. Faça login agora!</p>
 
-            <form class="inputCadastro" method="POST" action="php/login-email.php">
+            <form class="inputCadastro" method="POST" action="login-email.php">
                 <input type="text" id="email" name="email" placeholder= "Email">
                 <input type="password" id="senha" name="senha" placeholder="Senha">
             </form>
@@ -47,6 +47,11 @@
                     </div>
                 </div>
             </div>
+
+            <? if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+                <p style="color: #DC3545;"> Usuário ou senha inválido(s)</p>
+                <? } 
+                ?>
 
             <button class="btn" onclick="submitForm()">
                 <span class="shadow"><a href="Explorar.html"></a></span>

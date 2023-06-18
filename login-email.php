@@ -17,8 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($email == "usuario" && $senha == "123456") {
                 echo '<p class="mensagem-sucesso">Login realizado com sucesso!</p>';
+                header ("Location: Explorar.php");
             } else {
                 echo '<p class="mensagem-erro">Credenciais inválidas. Tente novamente.</p>';
+                header ("Location: Login.php?login=erro");
             }
         } else {
             echo '<p class="mensagem-erro">Por favor, preencha todos os campos.</p>';
