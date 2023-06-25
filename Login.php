@@ -47,12 +47,11 @@
                     </div>
                 </div>
             </div>
-
+            <!-- mudança na tag php a fim de ser melhor suportada por outras máquinas-->
             <?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
-                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
-                    <p style="color: #DC3545;">Usuário ou senha inválido(s)</p>
-                <?php } ?>
+                <p style="color: #DC3545;">Usuário ou senha inválido(s)</p>
             <?php } ?>
+
 
             <button class="btn" onclick="submitForm()">
                 <span class="shadow"><a href="Explorar.php"></a></span>

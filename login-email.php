@@ -17,16 +17,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($email == "usuario" && $senha == "123456") {
                 echo '<p class="mensagem-sucesso">Login realizado com sucesso!</p>';
-                header ("Location: Explorar.php");
+                header("Location: Explorar.php");
+                exit; // Encerra a execução do script após o redirecionamento
             } else {
-                echo '<p class="mensagem-erro">Credenciais inválidas. Tente novamente.</p>';
-                header ("Location: Login.php?login=erro");
+                $mensagemErro = "Credenciais inválidas. Tente novamente.";
             }
         } else {
-            echo '<p class="mensagem-erro">Por favor, preencha todos os campos.</p>';
+            $mensagemErro = "Por favor, preencha todos os campos.";
         }
     } else {
-        echo '<p class="mensagem-erro">Erro ao processar o formulário.</p>';
+        $mensagemErro = "Erro ao processar o formulário.";
     }
+
+    // Redireciona para a página de login com o parâmetro ?login=erro para exibir a mensagem de erro
+    header("Location: Login.php?login=erro&mensagem=" . urlencode($mensagemErro));
+    exit; // Encerra a execução do script após o redirecionamento
+}
+
+// Verifica se há uma mensagem de erro na URL
+if (isset($_GET['login']) && $_GET['login'] == 'erro' && isset($_GET['mensagem'])) {
+    $mensagemErro = $_GET['mensagem'];
+    echo '<p class="mensagem-erro">' . $mensagemErro . '</p>';
 }
 ?>
