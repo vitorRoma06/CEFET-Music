@@ -11,7 +11,7 @@
 <body>
     <aside class="menu-lateral">
         <header class="menu-lateral-header">
-            <a href="Explorar.html">
+            <a href="Explorar.php">
                 <div class="logo"><img src="img/logo.svg" alt="logo">
                     <span>Cefet<span id="blue">MUSIC</span></span>
                 </div>
@@ -19,7 +19,7 @@
         </header>
 
         <nav class="nav">
-            <a href="Explorar.html">
+            <a href="Explorar.php">
                 <button>
                     <span>
                         <img src="img/explorar.svg">
@@ -91,7 +91,7 @@
             </span>
         </button>
 
-        <a href="Explorar.html">
+        <a href="Explorar.php">
             <button>
                 <span>
                     <img src="img/explorar.svg">

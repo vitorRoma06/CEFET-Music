@@ -55,8 +55,8 @@
             <?php } ?>
 
             <button class="btn" onclick="submitForm()">
-                <span class="shadow"><a href="Explorar.html"></a></span>
-                <span class="edge"><a href="Explorar.html"></a></span>
+                <span class="shadow"><a href="Explorar.php"></a></span>
+                <span class="edge"><a href="Explorar.php"></a></span>
                 <span class="front text">ENTRAR</span>
             </button>
 
