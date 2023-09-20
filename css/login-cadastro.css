@@ -91,7 +91,6 @@ body {
 
 .inputCadastro input {
     font-family: var(--fonte-padrao);
-    font-weight: bold;
     padding: 22px;
     border: none;
     border-radius: 10px;
@@ -186,7 +185,7 @@ body {
 }
 
 
-.conteudo-container button span a {
+.conteudo-container button span p {
     font-family: var(--fonte-padrao);
     letter-spacing: 0.145em;
     font-size: 30px;

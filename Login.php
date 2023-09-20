@@ -1,3 +1,47 @@
+<?php
+    include('conexao.php');
+
+    if(isset($_POST['email']) || isset($_POST['senha'])) {
+        if(strlen($_POST['email'] == 0) || strlen($_POST['senha'] == 0)) {
+            echo "Preencha seu email e senha.";
+        }
+        else if(strlen($_POST['email']) == 0) {
+            echo "Preencha seu email.";
+        }else if(strlen($_POST['senha']) == 0) {
+            echo "Preencha sua senha.";
+        }else{
+
+            $email = $mysqli->real_escape_string($_POST['email']);
+            $senha = $mysqli->real_escape_string($_POST['senha']);
+
+            $sql_code = "SELECT * FROM login WHERE email = '$email' AND senha = '$senha'";
+            $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+            $qt = $sql_query->num_rows;
+
+            if($qt == 1){
+
+                $usuario = $sql_query->fetch_assoc();
+
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+
+                $_SESSION['id'] = $usuario['id'];
+                $_SESSION['nome'] = $usuario['nome'];
+
+                header("Location: home.php");
+
+
+            }else{
+                echo "Falha ao logar! E-mail ou senha incorretos";
+            }
+        }
+    } 
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,52 +62,50 @@
         <div class="conteudo-container">
             <h1 id="titulo-container">Login</h1>
             <p id="subtitulo">De volta ao ritmo: sua música favorita está esperando por você. Faça login agora!</p>
-
-            <form class="inputCadastro" method="POST" action="login-email.php">
+            
+            
+            
+            <!-- FORMULARIO -->
+            <form class="inputCadastro" method="POST" action="">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <input type="password" id="senha" name="senha" placeholder="Senha">
-            </form>
-            <div class="entrar-sociais">
-                <p id="entrar-com">Entrar com:</p>
 
-                <div class="sociais">
-                    <div class="elementsSociais">
-                        <div class="blocoo">
-                            <img class="img-social" src="img/deezer.svg">
-                            <div class="bloco"></div>
+                <div class="entrar-sociais">
+                    <p id="entrar-com">Entrar com:</p>
+
+                    <div class="sociais">
+                        <div class="elementsSociais">
+                            <div class="blocoo">
+                                <img class="img-social" src="img/deezer.svg">
+                                <div class="bloco"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="elementsSociais">
-                        <div class="blocoo">
-                            <img class="img-social" src="img/spotify.svg">
-                            <div class="bloco"></div>
+                        <div class="elementsSociais">
+                            <div class="blocoo">
+                                <img class="img-social" src="img/spotify.svg">
+                                <div class="bloco"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="elementsSociais">
-                        <div class="blocoo">
-                            <img class="img-social" src="img/google.svg">
-                            <div class="bloco"></div>
+                        <div class="elementsSociais">
+                            <div class="blocoo">
+                                <img class="img-social" src="img/google.svg">
+                                <div class="bloco"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- mudança na tag php a fim de ser melhor suportada por outras máquinas-->
-            <?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
-                <p style="color: #DC3545;">Usuário ou senha inválido(s)</p>
-            <?php } ?>
+
+                <button type="submit" class="btn">
+                    <span class="shadow"></span>
+                    <span class="edge"></span>
+                    <span class="front text"><p>ENTRAR</p></span>
+                </button>
+
+            </form>
+            <!-- FORMULARIO -->
 
 
-            <button class="btn" onclick="submitForm()">
-                <span class="shadow"><a href="Explorar.php"></a></span>
-                <span class="edge"><a href="Explorar.php"></a></span>
-                <span class="front text">ENTRAR</span>
-            </button>
 
-            <script>
-                function submitForm() {
-                    document.querySelector('.inputCadastro').submit();
-                }
-            </script>
 
             <p id="opcao">Você não tem uma conta? <a id="amarelo" href="Cadastro.html">Cadastre-se</a></p>
         </div>

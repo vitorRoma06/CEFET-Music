@@ -107,6 +107,7 @@ body {
     background-color: var(--corHover);
 }
 
+
 .menu-lateral button img {
     position: relative;
     height: 34px;
@@ -117,6 +118,13 @@ body {
 .menu-lateral button span {
     font-size: 20px;
     transition: all 0.3s ease;
+}
+
+.menu-lateral button span a{
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--corBranco);
 }
 
 .menu-lateral>nav {
