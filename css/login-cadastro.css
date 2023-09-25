@@ -83,12 +83,16 @@ body {
 }
 
 .inputCadastro {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 44px;
     width: 100%;
 }
 
+.cadastroo{
+    gap: 20px;
+}
 .inputCadastro input {
     font-family: var(--fonte-padrao);
     padding: 22px;
@@ -382,4 +386,12 @@ body {
     #opcao{
         font-size: 18px;
     }
+}
+
+.php{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 12em;
+    color: rgb(255, 48, 48);
 }
